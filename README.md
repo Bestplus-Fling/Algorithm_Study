@@ -10,7 +10,7 @@
 초기 설정
 git clone {현재 레포지터리 주소}
 git pull origin main
-git checkout -b {브랜치 이름(폴더 이름과 동일한 이름 권장)}
+git checkout -b {브랜치 이름(본인 이름과 동일한 이름 권장)}
 
 
 그 후 사용
@@ -29,4 +29,7 @@ git push origin {본인 브랜치}
 - TEST: 과목, 월말 등등
 예시1) minwoo/DFS/BOJ_2206_250331/sol.py, input.txt
 예시2) minsun/Tree/SWEA_1405_250401/sol.py, input.txt
+- 만약 틀린 문제를 commit할 경우
+> - minwoo/DFS/BOJ_2006_250331_Fail/sol.py, input.txt
+> - 
 
