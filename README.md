@@ -5,6 +5,7 @@
 - Fix: [PGM] 42839 | Brute Force | 시간 초과 해결 (코드 수정)
 - Refactor: [SWEA] 1234 | Stack | 코드 최적화 (코드 리팩토링)
 - Docs: [BOJ] 1000 | README 추가 (문서 작업)
+  
 **추가 정보 포함**
 - [BOJ] 11047 | Greedy | Pythonic한 코드 개선
 - [PGM] 42839 | Brute Force | itertools 활용
