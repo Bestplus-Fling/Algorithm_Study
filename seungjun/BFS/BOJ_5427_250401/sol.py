@@ -17,47 +17,37 @@ for tc in range(1, T + 1):
     for i in range(h):
         for j in range(w):
             if grid[i][j] == '*':
-                queue.append((i, j))
+                queue.append((i, j, 'fire'))
                 visited[i][j] = 0
-
-    while queue:
-        i, j = queue.popleft()
-
-        for dy, dx in dxy:
-            ni, nj = i + dy, j + dx
-            if ni < 0 or nj < 0 or h <= ni or w <= nj:
-                continue
-            if grid[ni][nj] == '#':
-                continue
-            if visited[ni][nj] != - 1 and visited[ni][nj] < visited[i][j] + 1:
-                continue
-            queue.append((ni, nj))
-            visited[ni][nj] = visited[i][j] + 1
-
-    # print(*visited, sep='\n')
-    # print()
 
     for i in range(h):
         for j in range(w):
             if grid[i][j] == '@':
-                queue.append((i, j))
+                queue.append((i, j, 'person'))
                 visited[i][j] = 0
 
     while queue:
-        i, j = queue.popleft()
+        # print(queue)
+        i, j, type_ = queue.popleft()
 
         for dy, dx in dxy:
             ni, nj = i + dy, j + dx
-            if ni < 0 or nj < 0 or h <= ni or w <= nj:
-                # 탈출시간 작성
+
+            # 탈출 조건
+            if type_ == 'person' and (ni < 0 or nj < 0 or ni >= h or nj >= w):
                 can_go = visited[i][j] + 1
+                # print(can_go)
+                queue.clear()
                 break
+            if ni < 0 or nj < 0 or ni >= h or nj >= w:
+                continue
+            if visited[ni][nj] != -1:
+                continue
             if grid[ni][nj] == '#':
                 continue
-            if visited[ni][nj] != - 1 and visited[ni][nj] <= visited[i][j] + 1:
-                continue
-            queue.append((ni, nj))
+            queue.append((ni, nj, type_))
             visited[ni][nj] = visited[i][j] + 1
+        # print(queue)
 
     # print(*visited, sep='\n')
 
