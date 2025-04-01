@@ -1,16 +1,22 @@
 # SSAFY 13기 마이스터 트랙 알고리즘 스터디입니다!!!
 ---
 ## ℹ️Commit Message 통일ℹ️
-- Solve: [BOJ] 11047 | Greedy | 동전 개수 최소화 (문제 해결 완료)
-- Fix: [PGM] 42839 | Brute Force | 시간 초과 해결 (코드 수정)
-- Refactor: [SWEA] 1234 | Stack | 코드 최적화 (코드 리팩토링)
-- Docs: [BOJ] 1000 | README 추가 (문서 작업)
+- **`(본인 이름) / {하단 참조}`**
   
-**추가 정보 포함**
-- [BOJ] 11047 | Greedy | Pythonic한 코드 개선
-- [PGM] 42839 | Brute Force | itertools 활용
-- [SWEA] 1234 | Stack | deque로 성능 개선
+- 문제 해결 완료: `Solve: Greedy | [BOJ] 11047 | 동전 개수 최소화`
+- 문제 미해결: `Fail: Graph | [BOJ] 1247 | 메모리 초과`
+- 코드 수정: `Fix: Brute Force | [PGM] 42839 | 시간 초과 해결`
+- 코드 최적화: `Refactor: Stack | [SWEA] 1234 | 코드 최적화`
+- 문서 작업: `Docs: [BOJ] 1000 | README 추가`  
+<br>
+  
+**추가 예시**
+- `Greedy | [BOJ] 11047 | Pythonic한 코드 개선`
+- `Brute Force | [PGM] 42839 | itertools 활용`
+- `Stack | [SWEA] 1234 | deque로 성능 개선`
 ---
+<br><br>
+
 ## 🚨주의사항🚨
 ### 📌Git Branch 관련📌
 - 이제부터 여러분들의 개개인 디렉토리를 branch로 분류한 후 commit → push를 진행해주셔야 합니다.
@@ -30,16 +36,15 @@
 > git commit -m "커밋 컨벤션을 지킨 내용으로 작성"
 > ```
 ### 🔥🔥🔥매우 중요🔥🔥🔥
-***git push origin {본인 브랜치}***
-
-
+> ***`git push origin {본인 브랜치}`***
+---
+<br><br>
 ### 📁디렉토리 생성📁
 아래 양식에 따라 디렉토리 생성 후 임시 파일을 생성해주세요!
 - BOJ: 백준
 - SWEA: SWEA
 - PGM: 프로그래머스
-- TEST: 과목, 월말 등등
-예시1) minwoo/DFS/BOJ_2206_250331/sol.py, input.txt
-예시2) minsun/Tree/SWEA_1405_250401/sol.py, input.txt
-- 만약 틀린 문제를 commit할 경우
+- TEST: 과목, 월말 등등<br>
+예시1) minwoo/DFS/BOJ_2206_250331/sol.py, input.txt<br>
+예시2) minsun/Tree/SWEA_1405_250401/sol.py, input.txt<br>
 
