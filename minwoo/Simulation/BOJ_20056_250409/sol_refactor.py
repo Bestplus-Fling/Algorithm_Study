@@ -3,6 +3,12 @@ from collections import deque
 sys.stdin = open('input.txt', 'r')
 dx = [-1, -1, 0, 1, 1, 1, 0, -1]
 dy = [0, 1, 1, 1, 0, -1, -1, -1]
+"""
+개선사항
+1. 배열 전체를 순회하는게 아니라, visited(set)을 사용해서 방문한 좌표들만 검증
+2. grid에 삽입할 때, nr, nc는 삽입하지 않기
+3. 
+"""
 
 
 def is_valid(nrow, ncol):
