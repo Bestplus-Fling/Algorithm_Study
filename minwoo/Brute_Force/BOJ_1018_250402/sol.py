@@ -14,7 +14,7 @@ def change(sx, sy, ex, ey, c, data):
 
 
 def check(sx, sy, data):
-    global ans, visited
+    global ans, checker
     ex, ey = sx + 8, sy + 8
     if ex >= N:
         sx, ex = N-8, N
@@ -34,7 +34,7 @@ N, M = map(int, input().split())
 data = [list(input().strip()) for _ in range(N)]
 
 ans = float('inf')
-visited = set()
+checker = set()
 for i in range(N):
     for j in range(M):
         check(i, j, data)

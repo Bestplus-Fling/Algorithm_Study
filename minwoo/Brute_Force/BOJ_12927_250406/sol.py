@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt', 'r')
+sys.stdin = open('input1.txt', 'r')
 
 
 def change(start, end, increase):
