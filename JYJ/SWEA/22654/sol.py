@@ -16,14 +16,14 @@ R : 현재 바라보고 있는 방향에서 오른쪽으로 90도 회전
 '''
 
 
-def x():
+def x(): # arr에서 x를 찾는 함수
     for i in range(n):
         for j in range(n):
             if arr[i][j] == 'X':
                 return i, j
 
 
-dx = [-1, 0, 1, 0]
+dx = [-1, 0, 1, 0] # 위 오 아 왼
 dy = [0, 1, 0, -1]
 
 
@@ -38,7 +38,7 @@ for tc in range(1, T+1):
         idx = 0
         i, j = x()
         for k in commend:
-            if k == 'R':
+            if k == 'R': # 델타에서 방향을 지정해놓고 들어가기
                 idx += 1
                 if idx == 4:
                     idx = 0
@@ -58,7 +58,7 @@ for tc in range(1, T+1):
 
                 i, j = ni, nj
 
-        if arr[i][j] == 'Y':
+        if arr[i][j] == 'Y': # 커맨드 입력이 끝나고 Y에 도착했는지 여부
             result.append(1)
         else:
             result.append(0)
