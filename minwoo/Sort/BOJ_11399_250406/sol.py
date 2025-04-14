@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt', 'r')
+sys.stdin = open('input1.txt', 'r')
 
 N = int(input())
 arr = sorted(list(map(int, input().split())))

@@ -10,19 +10,19 @@ for i in range(N):
 player.sort(key=lambda x: (-x[1], -x[2]))
 
 cnt, k = 1, 1
-visited = [False] * N
+checker = [False] * N
 for i in range(N):
     v, x, y = player[i]
-    if visited[v]: continue
+    if checker[v]: continue
     for j in range(N):
         o, p, q = player[j]
         if x < p and y < q:
             rank[v] += 1
-            visited[v] = True
+            checker[v] = True
         elif (x > p and y < q) or (x < p and y > q):
-            if visited[o]: continue
+            if checker[o]: continue
             rank[o] = rank[v]
-            visited[v], visited[o] = True, True
+            checker[v], checker[o] = True, True
             break
     # print(f'현재 선수 {v}, {rank}')
 print(*rank)

@@ -7,17 +7,17 @@ dxy = [1, 0], [0, -1], [-1, 0], [0, 1]
 
 def BFS(x, y, p):
     queue = deque([[x, y]])
-    visited[x][y] = True
+    checker[x][y] = True
     while queue:
         x, y = queue.popleft()
         for dx, dy in dxy:
             nx, ny = x + dx, y + dy
             if not(0 <= nx < N and 0 <= ny < N):
                 continue
-            if visited[nx][ny] or data[nx][ny] <= p:
+            if checker[nx][ny] or data[nx][ny] <= p:
                 continue
             queue.append([nx, ny])
-            visited[nx][ny] = True
+            checker[nx][ny] = True
 
 
 N = int(input())
@@ -29,11 +29,11 @@ for i in range(N):
             max_height = data[i][j]
 result = 0
 for k in range(0, max_height+1):
-    visited = [[False] * N for _ in range(N)]
+    checker = [[False] * N for _ in range(N)]
     cnt = 0
     for i in range(N):
         for j in range(N):
-            if visited[i][j]: continue
+            if checker[i][j]: continue
             if data[i][j] <= k: continue
             BFS(i, j, k)
             cnt += 1
