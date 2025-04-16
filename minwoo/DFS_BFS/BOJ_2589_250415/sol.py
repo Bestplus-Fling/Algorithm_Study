@@ -11,8 +11,8 @@ def bfs(ix, iy):
     visited[ix][iy] = True
     while queue:
         x, y, cnt = queue.popleft()
-        cnt += 1
         max_value = max(max_value, cnt)
+        cnt += 1
         for dx, dy in dxy:
             nx, ny = x + dx, y + dy
             if nx < 0 or nx >= R or ny < 0 or ny >= C:
@@ -30,5 +30,5 @@ for i in range(R):
     for j in range(C):
         if grid[i][j] == 'L':
             bfs(i, j)
-            print(f'{i},{j}에서 시작할 때 경로 최대 = {max_value}')
+            # print(f'{i},{j}에서 시작할 때 경로 최대 = {max_value}')
 print(max_value)
