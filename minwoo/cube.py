@@ -15,6 +15,6 @@ grid[x][y] != 0 => 칸에 쓰여 있는 수가 주사위의 바닥면으로 복�
 
 N, M, xx, yy, K = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(N)]
-cmd = list(map(int, input().split()))
+commend = list(map(int, input().split()))
 print(grid)
-print(cmd)
+print(commend)
