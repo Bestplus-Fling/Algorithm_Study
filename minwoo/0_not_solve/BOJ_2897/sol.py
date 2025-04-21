@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("Gready/BOJ_13305_250407/input.txt", "r")
+sys.stdin = open('input.txt', 'r')
 
 
 """
