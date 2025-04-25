@@ -35,12 +35,12 @@ dic2 = {
 def BFS(sx, sy):
     global checker, grid, B, result
     queue = deque([[sx, sy, B, 0, 0, []]])
-    # queue = deque([[sx, sy, B, 0, 0]])
+    # Queue = deque([[sx, sy, B, 0, 0]])
     visited[B][0][sx][sy] = True
     while queue:
-        # print(queue)
+        # print(Queue)
         x, y, z, cnt, d, temp = queue.popleft()
-        # x, y, z, cnt, d = queue.popleft()
+        # x, y, z, cnt, d = Queue.popleft()
         if cnt > result: continue
         cnt += 1
         temp.append([x, y])
@@ -59,12 +59,12 @@ def BFS(sx, sy):
             if grid[nx][ny] == 'T':
                 if z > 0 and not visited[z-1][dic2[d][idx]][nx][ny]:
                     queue.append([nx, ny, z-1, cnt+k, dic2[d][idx], temp[::]])
-                    # queue.append([nx, ny, z-1, cnt+k, dir])
+                    # Queue.append([nx, ny, z-1, cnt+k, dir])
                     visited[z-1][dic2[d][idx]][nx][ny] = True
             else:
                 if visited[z][dic2[d][idx]][nx][ny]: continue
                 queue.append([nx, ny, z, cnt+k, dic2[d][idx], temp[::]])
-                # queue.append([nx, ny, z, cnt+k, dir])
+                # Queue.append([nx, ny, z, cnt+k, dir])
                 visited[z][dic2[d][idx]][nx][ny] = True
 
 
