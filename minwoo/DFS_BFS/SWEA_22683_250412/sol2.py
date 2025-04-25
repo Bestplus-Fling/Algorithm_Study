@@ -24,7 +24,7 @@ def bfs():
             visited[left][kk][ix][iy] = True
 
     while queue:
-        # print(queue)
+        # print(Queue)
         x, y, k, d, cnt = queue.popleft()
         if data[x][y] == 'Y':
             result = cnt
