@@ -1,0 +1,13 @@
+10 10 1 1 0
+R G G G R G G G R X
+G G R G R G G G G G
+R G R G G G G W W G
+G G R R R R G W W G
+G R R T T R G G G R
+G G R R R R R R G R
+R G W W G G G G G G
+G G W W G R R R R G
+A G G G G R G G G G
+G G G G G G G R G G
+A 100 R 1 0
+X 10
